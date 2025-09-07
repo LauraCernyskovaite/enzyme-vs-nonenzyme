@@ -45,5 +45,5 @@ pip install tensorflow scikit-learn pandas numpy matplotlib
    ```python
    predict_protein_sequence("MKKLIALKHKDEMKKLAAAGGGSSSSVVVVVVNNNPPPQQQ")
 
-
+---
 
