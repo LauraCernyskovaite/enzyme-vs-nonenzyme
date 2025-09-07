@@ -38,7 +38,7 @@ pip install tensorflow scikit-learn pandas numpy matplotlib
 
 1. Atsidarykite `enzyme_vs_nonenzyme.ipynb` Google Colab arba Jupyter Notebook aplinkoje.  
 2. Įkelkite duomenų failą `ncbi_enzyme_dataset.csv` į tą pačią direktoriją.  
-3. Paleiskite visa kodą.  
+3. Paleiskite visą kodą.  
 4. Rezultatai (tikslumas, AUC, klaidų matrica ir grafikai) bus sugeneruoti aplanke `images/`.  
 5. Išsaugotas modelis bus sukurtas faile `enzyme_ncbi_model.keras`.  
 6. Norint atlikti pavyzdinę prognozę, galima naudoti:  
