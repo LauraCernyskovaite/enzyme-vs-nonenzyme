@@ -31,7 +31,7 @@ Norint paleisti projektą, reikia įdiegti šias bibliotekas:
 
 ```bash
 pip install tensorflow scikit-learn pandas numpy matplotlib
-
+```
 ---
 
 ## Naudojimas
