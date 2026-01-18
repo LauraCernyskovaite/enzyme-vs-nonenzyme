@@ -6,14 +6,16 @@
 - **0** – nefermentai  
 - **1** – fermentai  
 
-Modelis pagrįstas CNN ir BiLSTM architektūrų deriniu, optimizuotas su Adam algoritmu, vertintas pagal tikslumą, ROC-AUC ir klaidų matricą.
-
 ---
-
 ## Turinys
-- [Kas yra faile](#kas-yra-faile)  
-- [Reikalavimai](#reikalavimai)  
-- [Naudojimas](#naudojimas)  
+- [Kas yra faile?](#kas-yra-faile)
+- [Reikalavimai](#reikalavimai)
+- [Naudojimas](#naudojimas)
+- [Atnaujinimai](#atnaujinimai)
+  - [v2.0 (2026-01)](#v20-2026-01)
+  - [Kaip paleisti?](#kaip-paleisti)
+  - [Kas sukuriama paleidus koda?](#kas-sukuriama-paleidus-koda)
+
 
 ---
 
@@ -21,7 +23,8 @@ Modelis pagrįstas CNN ir BiLSTM architektūrų deriniu, optimizuotas su Adam al
 - `enzyme_vs_nonenzyme.ipynb` – visas kodas (Google Colab / Jupyter).  
 - `ncbi_enzyme_dataset.csv` – duomenų failas (sekos + etiketės).  
 - `images/` – mokymo grafikai ir klaidų matrica.  
-- `enzyme_ncbi_model.keras` – išsaugotas modelis.  
+- `enzyme_ncbi_model.keras` – išsaugotas modelis.
+- `enzyme_nonenzyme.py` – v2.0 kodas
 
 ---
 
@@ -60,14 +63,15 @@ pip install tensorflow scikit-learn pandas numpy matplotlib
 - Automatiškai generuojami ir išsaugomi grafikai (`results_enhanced/images/`): mokymo kreivės, ROC, PR, klaidų matrica, požymių svarba, modelių palyginimas.
 - Eksportuojamos prognozės ir ataskaitos (`results_enhanced/reports/`): `all_predictions.csv`, klaidų failai, `feature_importance.csv`, `final_report.json`.
 
-**Kaip paleisti (Google Colab):**
+### Kaip paleisti?
 ```bash
 !git clone https://github.com/LauraCernyskovaite/enzyme-vs-nonenzyme.git
 !cd enzyme-vs-nonenzyme
 !pip -q install tensorflow scikit-learn pandas numpy matplotlib biopython
 !python enzyme_nonenzyme.py
+```
 
-### Kas sukuriama paleidus skriptą?
+### Kas sukuriama paleidus koda?
 
 Paleidus `enzyme_nonenzyme.py`, automatiškai sukuriamas aplankas `results_enhanced/` su tokia struktūra:
 
