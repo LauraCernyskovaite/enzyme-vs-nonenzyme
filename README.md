@@ -60,9 +60,23 @@ pip install tensorflow scikit-learn pandas numpy matplotlib
 - Automatiškai generuojami ir išsaugomi grafikai (`results_enhanced/images/`): mokymo kreivės, ROC, PR, klaidų matrica, požymių svarba, modelių palyginimas.
 - Eksportuojamos prognozės ir ataskaitos (`results_enhanced/reports/`): `all_predictions.csv`, klaidų failai, `feature_importance.csv`, `final_report.json`.
 
-**Pagrindiniai rezultatai (testavimo rinkinyje):**
-- Multi-Modal: accuracy ≈ 97.30%, ROC-AUC ≈ 0.9952
-- Ensemble: accuracy ≈ 98.39%, ROC-AUC ≈ 0.9949
-- Klaidų sumažėjo nuo 32 iki 19.
+**Kaip paleisti (Google Colab):**
+```bash
+!git clone https://github.com/LauraCernyskovaite/enzyme-vs-nonenzyme.git
+!cd enzyme-vs-nonenzyme
+!pip -q install tensorflow scikit-learn pandas numpy matplotlib biopython
+!python enzyme_nonenzyme.py
 
+### Kas sukuriama paleidus skriptą?
 
+Paleidus `enzyme_nonenzyme.py`, automatiškai sukuriamas aplankas `results_enhanced/` su tokia struktūra:
+
+- `results_enhanced/augmented_data/` – išsaugotas išplėstas (angl. *augmented*) duomenų rinkinys  
+  (pvz., `augmented_dataset.csv`).
+- `results_enhanced/images/` – sugeneruoti grafikai (mokymo kreivės, ROC, PR, klaidų matricos, požymių svarba, modelių palyginimas).
+- `results_enhanced/models/` – išsaugotas geriausias modelis  
+  (pvz., `best_multimodal.keras`).
+- `results_enhanced/reports/` – ataskaitos ir prognozės failuose  
+  (pvz., `all_predictions.csv`, `errors_multimodal.csv`, `errors_ensemble.csv`, `feature_importance.csv`, `final_report.json`).
+
+> Pastaba: šie aplankai ir failai sugeneruojami automatiškai vykdymo metu, todėl jų nereikia kurti rankiniu būdu. Colab aplinkos failai yra laikini (dingsta išjungus sesiją). Jei reikia išsisaugoti rezultatus, rekomenduojama prijungti Google Drive ir results_enhanced/ katalogą nukopijuoti į Drive
